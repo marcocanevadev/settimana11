@@ -66,7 +66,7 @@ class Television:
 
     def jumpPrevChan(self):
         if self.getPower() == True:
-            self._prevChan, self._channel = self._channel, selSf._prevChan
+            self._prevChan, self._channel = self._channel, self._prevChan
     def __str__(self):
         return f' {type(self).__name__!s}:\nBrand:\t\t{self._brand!s}\nModel:\t\t{self._model!s}\nPower:\t\t{self._powerOn!s}\nVolume:\t\t{self._volume!s}\nMuted:\t\t{self._muted!s}\nChannel:\t{self._channel!s}\nPrevChannel:\t{self._prevChan!s}\n'
     
