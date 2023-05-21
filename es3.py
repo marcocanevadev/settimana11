@@ -9,7 +9,7 @@ class SortedSet(list):
     def insert(self, value):
        # print(self)
         if value not in self:
-            self.append(value)
+            super().append(value)
             self = sorted(set(self))
             return self
           #  _index = [i for x,i in self if x < value]
@@ -21,7 +21,14 @@ class SortedSet(list):
 if __name__ == '__main__':
     l = [2,1,8,5,3,1,1]
     print(SortedSet(l))
+    print('\t',l)
     print(SortedSet.insert(l,4))
+    print('\t',l)
     print(SortedSet.append(l,7))
+    print('\t',l)
 
-    list
+    list = SortedSet([2,3,3,1])
+    print(list)
+    list.insert(0)
+    list.append(6)
+    print(list)
